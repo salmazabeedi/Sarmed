@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نوس - تسجيل الدخول وإنشاء حساب</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sign.css"/>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">رجوع</button>
+
+  <div class="icon-background">
+    <i class="fas fa-feather icon" style="top: 5%; left: 10%;"></i>
+    <i class="fas fa-book-open icon" style="top: 15%; left: 60%;"></i>
+    <i class="fas fa-music icon" style="top: 30%; left: 25%;"></i>
+    <i class="fas fa-scroll icon" style="top: 50%; left: 80%;"></i>
+    <i class="fas fa-pen-fancy icon" style="top: 70%; left: 45%;"></i>
+    <i class="fas fa-feather icon" style="top: 85%; left: 20%;"></i>
+    <i class="fas fa-quill icon" style="top: 95%; left: 70%;"></i>
+  </div>
+
+  <div class="container">
+    <h1>تسجيل الدخول</h1>
+    <form id="login-form">
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+    <p class="switch-link" onclick="toggleForm()">ليس لديك حساب؟ أنشئ حساباً</p>
+  </div>
+
+  <div class="container" style="display: none;">
+    <h1>إنشاء حساب</h1>
+    <form id="signup-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">إنشاء حساب</button>
+    </form>
+    <p class="switch-link" onclick="toggleForm()">لديك حساب بالفعل؟ تسجيل الدخول</p>
+  </div>
+
+  <script>
+    function toggleForm() {
+      const containers = document.querySelectorAll('.container');
+      containers.forEach(container => container.style.display = container.style.display === 'none' ? 'block' : 'none');
+    }
+  </script>
+</body>
+</html>

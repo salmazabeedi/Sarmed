@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نوس - محادثات AI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/abbasi.css" />
+  </head>
+  <body>
+    
+    <button onclick="window.location.href='index.html'" class="back-button">
+      رجوع
+    </button>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo"
+          style="width: 100px; height: 50px; vertical-align: middle"
+        />
+        نوس
+      </div>
+      <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="Aboutus.html">من نحن ؟</a>
+        <a href="Services.html">خدماتنا </a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </nav>
+
+    <!-- عنوان "أبرز شعراء العصر العباسي" -->
+    <h1 class="main-title">أبرز شعراء العصر العباسي</h1>
+
+    <!-- أيقونات الخلفية -->
+    <div class="icon-background">
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-quill icon"></i>
+      <i class="fas fa-scroll icon"></i>
+      <i class="fas fa-scroll icon"></i>
+      <i class="fas fa-book-open icon"></i>
+      <i class="fas fa-pen-fancy icon"></i>
+      <i class="fas fa-feather-alt icon"></i>
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-quill icon"></i>
+      <i class="fas fa-scroll icon"></i>
+    </div>
+
+    <!-- قسم الميزات -->
+    <section class="features">
+      <a
+        onclick="navigateToWelcome('assets/images/00.jpg', 'ابن نواس'); sendToChat('assets/images/00.jpg', 'ابن نواس');"
+        class="feature"
+      >
+        <img src="assets/images/00.jpg" alt="Feature 1 Image" />
+        <h3>الشاعر ابن نواس</h3>
+        <p>
+          شاعر عباسي اشتهر بشعره في الخمر والغزل واللهو، وكان له أسلوب جريء
+          ومتمرد. كتب أيضاً في الفخر والهجاء بأسلوب مبتكر.
+        </p>
+      </a>
+
+      <a
+        onclick="navigateToWelcome('assets/images/01.jpg', 'ابن الرومي'); sendToChat('assets/images/01.jpg', 'ابن الرومي')"
+        class="feature"
+      >
+        <img src="assets/images/01.jpg" alt="Feature 2 Image" />
+        <h3>الشاعر ابن الرومي</h3>
+        <p>
+          شاعر عراقي متميز في فنون الوصف والتصوير، وكان له أسلوب نقدي حاد يعبر
+          عن معاناة الإنسان ويعكس مشاكل المجتمع والسياسة.
+        </p>
+      </a>
+
+      <a
+        class="feature"
+        onclick="navigateToWelcome('assets/images/02.jpg', 'ابن معتز');
+        sendToChat('assets/images/02.jpg', 'ابن معتز')"
+      >
+        <img src="assets/images/02.jpg" alt="Feature 3 Image" />
+        <h3>الشاعر ابن معتز</h3>
+        <p>
+          شاعر عباسي بارع في وصف الطبيعة والجمال، وكان معروفاً ببراعة لغته
+          وسلاستها. اهتم بالقيم الاجتماعية والثقافية في شعره.
+        </p>
+      </a>
+
+      <a
+        class="feature"
+        onclick="navigateToWelcome('assets/images/Albahtari.jpg', 'البحتري');
+                   sendToChat('assets/images/Emro-alqays.jpg', 'البحتري');"
+      >
+        <img src="assets/images/Albahtari.jpg" alt="Feature 4 Image" />
+        <h3>الشاعر البحتري</h3>
+        <p>
+          شاعر عباسي شهير بشعره الرقيق واهتمامه بالمدح والرثاء. عُرف بجمال وصفه
+          للطبيعة، وكان له أسلوب سلس وبسيط في التعبير.
+        </p>
+      </a>
+    </section>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function navigateToWelcome(imageSrc, poetName) {
+        // Encode parameters for URL
+        const encodedImage = encodeURIComponent(imageSrc);
+        const encodedName = encodeURIComponent(poetName);
+
+        // Redirect to onWelcome.html with parameters
+        window.location.href = `onWelcome.html?image=${encodedImage}&name=${encodedName} `;
+      }
+
+      function sendToChat(imageSrc, poetName) {
+        // Store the selected image and name in local storage
+        localStorage.setItem("selectedPoetImage", imageSrc);
+        localStorage.setItem("selectedPoetName", poetName);
+      }
+    </script>
+  </body>
+</html>

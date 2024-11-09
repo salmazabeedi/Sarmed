@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نوس - امرؤ القيس</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/jahelia.css" />
+  </head>
+  <body>
+    <button onclick="window.location.href='index.html'" class="back-button">
+      رجوع
+    </button>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo"
+          style="width: 100px; height: 50px; vertical-align: middle"
+        />
+        نوس
+      </div>
+      <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="Aboutus.html">من نحن ؟</a>
+        <a href="Services.html">خدماتنا </a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </nav>
+    <h1 class="title">أبرز شاعر في عصر الجاهلية</h1>
+
+    <section class="features">
+      <div class="feature">
+        <a
+          onclick="navigateToWelcome('assets/images/Emro-alqays.jpg', 'امرؤ القيس'); sendToChat('assets/images/Emro-alqays.jpg', 'امرؤ القيس')"
+        >
+          <img src="assets/images/Emro-alqays.jpg" alt="Feature Image" />
+          <h3>الشاعر امرؤ القيس</h3>
+          <p>
+            شاعر جاهلي بارع في الغزل، ويعد من مؤسسي هذا النوع من الشعر في الأدب
+            العربي. اشتهر بوصف الطبيعة والمشاعر الإنسانية، وله العديد من الأبيات
+            التي تجسد صوراً مبدعة للحب والحرب.
+          </p>
+        </a>
+      </div>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+        function navigateToWelcome(imageSrc, poetName) {
+          const encodedImage = encodeURIComponent(imageSrc);
+          const encodedName = encodeURIComponent(poetName);
+
+          window.location.href = `onWelcome.html?image=${encodedImage}&name=${encodedName} `;
+        }
+
+        function sendToChat(imageSrc, poetName) {
+          localStorage.setItem("selectedPoetImage", imageSrc);
+          localStorage.setItem("selectedPoetName", poetName);
+        }
+      </script>
+    </section>
+  </body>
+</html>

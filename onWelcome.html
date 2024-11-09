@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نوس - ترحيب</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/onWelcome.css" />
+  </head>
+  <body>
+    <div class="icon-background">
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-book icon"></i>
+      <i class="fas fa-music icon"></i>
+      <i class="fas fa-scroll icon"></i>
+      <i class="fas fa-pen-fancy icon"></i>
+      <i class="fas fa-feather-alt icon"></i>
+      <i class="fas fa-book-open icon"></i>
+      <i class="fas fa-microphone icon"></i>
+    </div>
+
+    <!-- تأثير البوابة المتحركة -->
+    <div class="gate-background">
+      <div class="gate left"></div>
+      <div class="gate right"></div>
+    </div>
+
+    <!-- شاشة الترحيب -->
+    <div class="welcome-screen">
+      <img src="assets/images/02.jpg" alt="صورة الشاعر" id="welcomeImage" />
+      <h2 id="welcomeText"></h2>
+      <p>اكتشف المزيد عن عالم الشعراء مع تجربة AI متقدمة.</p>
+    </div>
+
+    <script>
+      // دالة لتحريك البوابة وفتحها مرة واحدة
+      window.onload = function () {
+        const leftGate = document.querySelector(".gate.left");
+        const rightGate = document.querySelector(".gate.right");
+        const iconBackground = document.querySelector(".icon-background");
+    
+        // تشغيل الرسوم المتحركة لفتح البوابة
+        setTimeout(() => {
+          leftGate.style.transform = "translateX(-100%)";
+          rightGate.style.transform = "translateX(100%)";
+          iconBackground.style.opacity = "1";
+    
+          setTimeout(() => {
+            goToChatPage(); 
+          }, 2000); 
+        }, 500); 
+      };
+    
+      const urlParams = new URLSearchParams(window.location.search);
+      const poetName = urlParams.get("name");
+      const imageSrc = urlParams.get("image");
+    
+      if (poetName && imageSrc) {
+        document.getElementById("welcomeText").innerText = `مرحبا بك في عالم ${poetName}`;
+        document.getElementById("welcomeImage").src = decodeURIComponent(imageSrc);
+      } else {
+        console.error("Missing parameters in the URL.");
+      }
+    
+      function goToChatPage() {
+        if (poetName === 'بدر بن عبدالمحسن') {
+          window.location.href = "Chat2.html";
+        } else {
+          window.location.href = "realchat.html";
+        }
+      }
+    </script>
+    
+  </body>
+</html>

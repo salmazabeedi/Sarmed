@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سَرمد - صفحة الدردشة</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/realchat.css" />
+  </head>
+  <body>
+    <div class="header">
+      <button class="back-button" onclick="goBack()">رجوع</button>
+      <div class="logo">سَرمد</div>
+    </div>
+
+    <div class="icon-background">
+      <i class="fas fa-feather icon"></i>
+      <i class="fas fa-book-open icon"></i>
+      <i class="fas fa-music icon"></i>
+      <i class="fas fa-scroll icon"></i>
+      <i class="fas fa-pen-fancy icon"></i>
+      <i class="fas fa-feather-alt icon"></i>
+      <i class="fas fa-book icon"></i>
+      <i class="fas fa-microphone icon"></i>
+      <i class="fas fa-paint-brush icon"></i>
+      <i class="fas fa-lightbulb icon"></i>
+    </div>
+
+    <div class="profile-section">
+      <h1 id="pname"></h1>
+    </div>
+
+    <div class="main-container">
+      <div class="side-pic">
+        <img id="userImage" src="assets/images/03.jpg" alt="user Pic" />
+      </div>
+
+      <!-- Iframe Container -->
+      <div id="iframe-overlay">
+        <iframe src="http://725e-34-125-186-4.ngrok-free.app/"></iframe>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const selectedImage = localStorage.getItem("selectedPoetImage");
+        const selectedName = localStorage.getItem("selectedPoetName");
+
+        if (selectedImage && selectedName) {
+          document.getElementById("userImage").src = selectedImage;
+          document.getElementById("pname").textContent = selectedName;
+        }
+      };
+
+      function goBack() {
+        const selectedName = localStorage.getItem("selectedPoetName"); 
+
+        if (selectedName) {
+          if (
+            selectedName === "ابن نواس" ||
+            selectedName === "ابن الرومي" ||
+            selectedName === "البحتري" ||
+            selectedName === "ابن معتز"
+          ) {
+            window.location.href = "Abbasi.html";
+          } else if (selectedName === "غازي القصيبي") {
+            window.location.href = "modern.html";
+          } else {
+            window.location.href = "Jahelia.html";
+          }
+        } else {
+          console.error("selectedName is not defined or missing.");
+          window.location.href = "default.html"; 
+        }
+      }
+      function sendMessage() {
+        const input = document.querySelector(".chat-input");
+        const messageText = input.value.trim();
+
+        if (messageText) {
+          const chatMessages = document.querySelector(".chat-messages");
+
+          const userMessage = document.createElement("div");
+          userMessage.classList.add("chat-bubble", "user");
+
+          const userImage = document.createElement("img");
+          const userimageSrc = localStorage.getItem("selectedPoetImage");
+          userImage.src = userimageSrc;
+          userImage.alt = "User";
+
+          const messageContent = document.createElement("span");
+          messageContent.textContent = messageText;
+
+          userMessage.appendChild(userImage);
+          userMessage.appendChild(messageContent);
+          chatMessages.appendChild(userMessage);
+
+          input.value = "";
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+
+          setTimeout(() => {
+            const botMessage = document.createElement("div");
+            botMessage.classList.add("chat-bubble", "bot");
+
+            const botImage = document.createElement("img");
+            const selectedImage = localStorage.getItem("selectedPoetImage");
+            botImage.src = selectedImage;
+            botImage.alt = "Bot";
+
+            const botContent = document.createElement("span");
+            botContent.textContent = "هذا رد من البوت على: " + messageText;
+
+            botMessage.appendChild(botImage);
+            botMessage.appendChild(botContent);
+            chatMessages.appendChild(botMessage);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }, 1000);
+        }
+      }
+    </script>
+  </body>
+</html>

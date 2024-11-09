@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>باقاتنا</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="assets/css/Subsucribe.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">نوس</div>
+    <div class="nav-links">
+      <a href="#">الرئيسية</a>
+      <a href="#">باقاتنا</a>
+      <a href="#">خدماتنا</a>
+      <a href="#">تواصل معنا</a>
+    </div>
+  </nav>
+
+  <section class="packages">
+    <h1 class="section-title">باقاتنا</h1>
+    <div class="package-cards">
+      <!-- باقة أساسية -->
+      <div class="package-card" onclick="showPackageDetails('الباقة الأساسية', 'باقة تحتوي على خدمات أساسية بأسعار مناسبة.')">
+        <i class="fas fa-gem icon"></i> 
+        <h3>الباقة الأساسية</h3>
+        <p>السعر: 99 ريال</p>
+        <button>تفاصيل</button>
+      </div>
+
+      <!-- باقة متوسطة -->
+      <div class="package-card" onclick="showPackageDetails('الباقة المتوسطة', 'باقة تشمل خدمات إضافية بأسعار متوسطة.')">
+        <i class="fas fa-star icon"></i> 
+        <h3>الباقة المتوسطة</h3>
+        <p>السعر: 199 ريال</p>
+        <button>تفاصيل</button>
+      </div>
+
+      <!-- باقة متقدمة -->
+      <div class="package-card" onclick="showPackageDetails('الباقة المتقدمة', 'باقة تحتوي على مجموعة واسعة من الخدمات الممتازة.')">
+        <i class="fas fa-crown icon"></i> 
+        <h3>الباقة المتقدمة</h3>
+        <p>السعر: 299 ريال</p>
+        <button>تفاصيل</button>
+      </div>
+
+      <!-- باقة خاصة -->
+      <div class="package-card" onclick="showPackageDetails('الباقة الخاصة', 'باقة مخصصة تناسب احتياجات العملاء المميزين.')">
+        <i class="fas fa-diamond icon"></i> 
+        <h3>الباقة الخاصة</h3>
+        <p>السعر: 499 ريال</p>
+        <button>تفاصيل</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- نافذة التفاصيل -->
+  <div class="package-details" id="packageDetails">
+    <div class="details-content">
+      <h2 id="packageTitle">عنوان الباقة</h2>
+      <p id="packageDescription">وصف الباقة</p>
+      <button onclick="closePackageDetails()">إغلاق</button>
+    </div>
+  </div>
+
+  <script src="assets/js/subs.js"></script>
+</body>
+</html>
