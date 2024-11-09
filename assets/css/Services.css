@@ -1,0 +1,163 @@
+/* تنسيقات عامة */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #232638, #2a2a3c);
+  color: #fff;
+  text-align: center;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a27;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-left: 50px;
+
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+
+/* قسم الخدمات */
+.services {
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  width: 200px; /* تكبير عرض الدائرة */
+  height: 200px; /* تكبير ارتفاع الدائرة */
+  background-color: #2e2e44;
+  border-radius: 50%; /* يجعل البطاقة دائرية */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  background-color: #00d4ff;
+  color: #1a1a27;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.7);
+}
+
+.service-card i {
+  font-size: 2rem; /* تصغير حجم الأيقونة */
+  margin-bottom: 5px;
+  transition: opacity 0.3s;
+  color: inherit;
+}
+
+.service-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+/* إخفاء الأيقونة والنص عند التمرير */
+.service-card:hover i,
+.service-card:hover h3 {
+  opacity: 0;
+}
+
+.service-info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0); /* خلفية شفافة بيضاء */
+  padding: 10px;
+  border-radius: 10px;
+  color: #000; /* لون النص أسود */
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+  width: 80%;
+  text-align: center;
+}
+
+/* إظهار تفاصيل الخدمة عند التمرير */
+.service-card:hover .service-info {
+  display: block;
+  opacity: 1;
+}
+    /* أيقونات مبعثرة في الخلفية */
+    .icon-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .icon {
+      position: absolute;
+      font-size: 2.5em;
+      color: rgba(255, 255, 255, 0.01);
+      /* قلل الشفافية هنا */
+      animation: float 8s infinite ease-in-out;
+    }
+
+
+    /* تحريك الأيقونات */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+

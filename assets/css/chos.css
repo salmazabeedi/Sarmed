@@ -1,0 +1,204 @@
+.back-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00d4ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000; /* لتأكد أن الزر فوق العناصر الأخرى */
+}
+
+.back-button:hover {
+  background-color: #00a6c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #25293c);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+  font-size: 2.5em;
+}
+
+.character-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.character {
+  background-color: #2a2a3c;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.character:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.2), #2a2a3c);
+}
+
+.character img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.character:hover img {
+  transform: scale(1.1);
+}
+
+.character-name {
+  font-size: 1.2em;
+  color: #00d4ff;
+  margin-bottom: 8px;
+}
+
+.character-description {
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+
+/* الأيقونات المتبعثرة في الخلفية */
+.icon-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.1);
+}
+.description {
+  margin-top: 10px; /* اضبط القيمة حسب رغبتك لرفع النص للأعلى */
+  margin-bottom: 10px;
+  text-align: center; /* للتأكد من أن النص في المنتصف */
+  font-size: 1em; /* يمكنك تعديل حجم الخط إذا لزم الأمر */
+}
+
+/* مواضع مختلفة للأيقونات */
+.icon:nth-child(1) {
+  top: 5%;
+  left: 10%;
+}
+.icon:nth-child(2) {
+  top: 15%;
+  left: 30%;
+}
+.icon:nth-child(3) {
+  top: 25%;
+  left: 70%;
+}
+.icon:nth-child(4) {
+  top: 35%;
+  left: 50%;
+}
+.icon:nth-child(5) {
+  top: 45%;
+  left: 20%;
+}
+.icon:nth-child(6) {
+  top: 55%;
+  left: 80%;
+}
+.icon:nth-child(7) {
+  top: 65%;
+  left: 40%;
+}
+.icon:nth-child(8) {
+  top: 75%;
+  left: 60%;
+}
+.icon:nth-child(9) {
+  top: 10%;
+  left: 90%;
+}
+.icon:nth-child(10) {
+  top: 20%;
+  left: 5%;
+}
+.icon:nth-child(11) {
+  top: 30%;
+  left: 85%;
+}
+.icon:nth-child(12) {
+  top: 40%;
+  left: 35%;
+}
+.icon:nth-child(13) {
+  top: 50%;
+  left: 15%;
+}
+.icon:nth-child(14) {
+  top: 60%;
+  left: 75%;
+}
+.icon:nth-child(15) {
+  top: 70%;
+  left: 25%;
+}
+.icon:nth-child(16) {
+  top: 80%;
+  left: 95%;
+}
+.icon:nth-child(17) {
+  top: 85%;
+  left: 10%;
+}
+.icon:nth-child(18) {
+  top: 5%;
+  left: 50%;
+}
+.icon:nth-child(19) {
+  top: 35%;
+  left: 5%;
+}
+.icon:nth-child(20) {
+  top: 15%;
+  left: 60%;
+}

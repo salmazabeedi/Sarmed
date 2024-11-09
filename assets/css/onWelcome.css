@@ -1,0 +1,139 @@
+    /* إعدادات عامة */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #f5f5f5;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #181818;
+      position: relative;
+    }
+
+    /* تأثير البوابة */
+    .gate-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .gate {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background-color: #2a2a3c;
+      transition: transform 2s ease-in-out;
+    }
+
+    .gate.left {
+      left: 0;
+      transform-origin: right;
+    }
+
+    .gate.right {
+      right: 0;
+      transform-origin: left;
+    }
+
+    /* أيقونات مبعثرة */
+    .icon-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 6; /* فوق البوابة */
+    }
+
+    .icon {
+      position: absolute;
+      font-size: 2em;
+      color: rgba(255, 255, 255, 0.1);
+      animation: float 8s infinite ease-in-out;
+    }
+
+    /* تحريك الأيقونات */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* مواضع مختلفة للأيقونات */
+    .icon:nth-child(1) { top: 10%; left: 20%; }
+    .icon:nth-child(2) { top: 30%; left: 70%; }
+    .icon:nth-child(3) { top: 50%; left: 40%; }
+    .icon:nth-child(4) { top: 70%; left: 15%; }
+    .icon:nth-child(5) { top: 80%; left: 80%; }
+    .icon:nth-child(6) { top: 20%; left: 50%; }
+    .icon:nth-child(7) { top: 60%; left: 30%; }
+    .icon:nth-child(8) { top: 40%; left: 10%; }
+
+    /* شاشة الترحيب */
+    .welcome-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0); /* خلفية شفافة للنص */
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+    }
+
+    .welcome-screen img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .welcome-screen h2 {
+      font-size: 2.5em;
+      color: #00d4ff;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .welcome-screen p {
+      font-size: 1.2em;
+      color: #d1d1d1;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .welcome-screen button {
+      background-color: #00d4ff;
+      color: #121212;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .welcome-screen button:hover {
+      background-color: #00b3e6;
+      transform: scale(1.05);
+    }

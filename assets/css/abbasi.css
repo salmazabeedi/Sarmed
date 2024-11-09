@@ -1,0 +1,156 @@
+/* تنسيقات عامة للصفحة */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f;
+  color: #fff;
+  text-align: center;
+}
+
+/* شريط التنقل */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+background-color: #1a1a27;
+}
+
+.navbar .logo {
+font-size: 1.8em;
+font-weight: bold;
+color: #00d4ff;
+margin-left: 50px;
+
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+margin-left: auto;
+}
+
+.nav-links a {
+color: #fff;
+text-decoration: none;
+margin: 0 10px;
+font-weight: bold;
+
+}
+
+.nav-links a:hover {
+color: #00d4ff;
+}
+
+/* تنسيق العنوان الرئيسي */
+.main-title {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* تنسيق قسم الأيقونات في الخلفية */
+.icon-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.1); /* لون شفاف للأيقونات */
+}
+
+.back-button {
+  background-color: #00d4ff;
+  color: #1f1f2e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #00b3e6;
+}
+
+/* إعدادات مواضع الأيقونات */
+.icon:nth-child(1) { top: 5%; left: 10%; }
+.icon:nth-child(2) { top: 20%; left: 15%; }
+.icon:nth-child(3) { top: 35%; left: 40%; }
+.icon:nth-child(4) { top: 25%; left: 70%; }
+.icon:nth-child(5) { top: 55%; left: 30%; }
+.icon:nth-child(6) { top: 15%; left: 50%; }
+.icon:nth-child(7) { top: 65%; left: 85%; }
+.icon:nth-child(8) { top: 75%; left: 25%; }
+.icon:nth-child(9) { top: 80%; left: 10%; }
+.icon:nth-child(10) { top: 40%; left: 60%; }
+.icon:nth-child(11) { top: 90%; left: 20%; }
+.icon:nth-child(12) { top: 50%; left: 75%; }
+
+/* تنسيق النص والصور في قسم الميّزات */
+.features {
+  display: flex;
+  justify-content: space-between; /* This will place items in a row */
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap; /* Ensure they stay in one row */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.feature {
+  width: 22%; /* Adjust to ensure they fit in a row */
+  text-align: center;
+  background-color: #2e2e44;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none; 
+
+}
+
+/* تأثير التمرير */
+.feature:hover {
+  background-color: #0c1b1e; /* لون الخلفية عند التمرير */
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(172, 204, 254, 0.7); /* ظل أكبر عند التمرير */
+  transform: scale(1.05); /* تكبير بسيط عند التمرير */
+  text-decoration: none; /* Ensure no underline on hover */
+
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-top: 10px;
+  text-decoration: none; 
+
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+  text-decoration: none; 
+
+}

@@ -1,0 +1,105 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a27;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #00d1b2;
+    margin: 20px 0;
+  }
+  
+  /* Arrows for navigation */
+  .arrows {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .arrow {
+    background-color: #00d1b2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow:hover {
+    background-color: #00a691;
+  }
+  
+  /* Carousel styles */
+  .features {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+  }
+  
+  .features::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .feature {
+    background-color: #2e2e44;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 10px;
+    flex: 0 0 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .feature h3 {
+    color: #00d1b2;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .feature p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  

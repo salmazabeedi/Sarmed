@@ -1,0 +1,111 @@
+      body {
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #1e1e2f;
+          color: #fff;
+          text-align: center;
+      }
+
+     
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a27;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00d4ff;
+    margin-left: 50px;
+  
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  
+  }
+  
+  .nav-links a:hover {
+    color: #00d4ff;
+  }
+
+      .title {
+          font-size: 2rem;
+          color: #00d4ff;
+          margin-top: 20px;
+      }
+
+      .features {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          padding: 20px;
+      }
+
+      .feature {
+          width: 250px;
+          text-align: center;
+          background-color: #2e2e44;
+          border-radius: 10px;
+          padding: 15px;
+          color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s;
+      }
+
+      /* تأثير التمرير */
+      .feature:hover {
+          background-color: #0c1b1e;
+          color: #fff;
+          box-shadow: 0 8px 16px rgba(172, 204, 254, 0.7);
+          transform: scale(1.05);
+      }
+
+      .feature img {
+          width: 100%;
+          border-radius: 50%;
+      }
+
+      .feature h3 {
+          font-size: 1.2rem;
+          color: #00d1b2;
+          margin-top: 10px;
+      }
+
+      .feature p {
+          font-size: 0.9rem;
+          color: #ccc;
+          margin-top: 5px;
+      }
+
+      .back-button {
+          background-color: #00d4ff;
+          color: #1f1f2e;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1em;
+          cursor: pointer;
+          border-radius: 5px;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1000;
+          transition: background-color 0.3s;
+      }
+
+      .back-button:hover {
+          background-color: #00b3e6;
+      }

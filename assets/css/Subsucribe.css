@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #181818;
+    color: #f5f5f5;
+    text-align: right;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f2e;
+    color: #00d4ff;
+  }
+  
+  .navbar .nav-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  .packages {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5em;
+    color: #00d4ff;
+    margin-bottom: 20px;
+  }
+  
+  .package-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .package-card {
+    background-color: #232638;
+    color: #00d4ff;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+  }
+  
+  .package-card:hover {
+    background-color: #2a2a3c;
+    transform: scale(1.05);
+  }
+  
+  .package-card button {
+    background-color: #00d4ff;
+    border: none;
+    color: #1f1f2e;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .package-card button:hover {
+    background-color: #00b3e6;
+  }
+  
+  /* نافذة التفاصيل */
+  .package-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .details-content {
+    background-color: #1f1f2e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #f5f5f5;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .details-content button {
+    background-color: #00d4ff;
+    border: none;
+    color: #1f1f2e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
